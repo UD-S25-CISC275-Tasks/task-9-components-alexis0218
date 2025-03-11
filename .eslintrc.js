@@ -2,17 +2,17 @@ module.exports = {
     env: {
         es2022: true,
         node: true,
-        browser: true
+        browser: true,
     },
     settings: {
         react: {
-            version: "detect"
-        }
+            version: "detect",
+        },
     },
     extends: [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react-hooks/recommended",
     ],
     root: true,
     parser: "@typescript-eslint/parser",
@@ -21,17 +21,17 @@ module.exports = {
         {
             files: ["src/**/*.test.ts", "src/**/*.test.tsx"],
             env: {
-                jest: true
-            }
-        }
+                jest: true,
+            },
+        },
     ],
     parserOptions: {
         ecmaVersion: 12,
         sourceType: "module",
         ecmaFeatures: {
-            jsx: true
+            jsx: true,
         },
-        project: ["./tsconfig.json"]
+        project: ["./tsconfig.json"],
     },
     ignorePatterns: [".eslintrc.js", "jest.config.js"],
     rules: {
@@ -67,9 +67,9 @@ module.exports = {
                 types: {
                     unknown:
                         "That is not allowed in this course. You should be able to specify the type more clearly!",
-                    any: "That is not allowed in this course. You should be able to figure out the type!"
-                }
-            }
+                    any: "That is not allowed in this course. You should be able to figure out the type!",
+                },
+            },
         ],
         // https://typescript-eslint.io/rules/no-array-constructor
         // Disallow generic Array constructors.
@@ -94,6 +94,6 @@ module.exports = {
 
         // https://typescript-eslint.io/rules/no-unnecessary-condition
         // Disallow conditionals where the type is always truthy or always falsy.
-        "@typescript-eslint/no-unnecessary-condition": "error"
-    }
+        "@typescript-eslint/no-unnecessary-condition": "error",
+    },
 };
